@@ -11,11 +11,13 @@ Folders:
 
 data:
 The input files used for dadi
+
 	clean_2020-04-27_sub40_snps_nonN_inTheMask.txt: the total number of base pairs used for the analysis. This include intergenic variant and non-variant sites (non-missing matches to the reference). We excluded sites with more than 5% missing data, hypermutable CpG sites, pericentromeric regions rich in satellite repeats and general repeat regions identified with Heng Li’s SNPable approach. The JSFS is polarised to Morocco, the best modern representative of the original coloniser of CVI.
 	sfs_interg_2020-06-03_5percN_clean_2020-04-27_sub40_dadiJsfsX.txt: the JSFS in dadi format	
 
 scripts:
 Scripts to submit to the cluster, running dadi and process results
+
 	lounch_dadi.command and lounch_dadi_cviMor.command submit the scripts simple_unfolded.py and simple_unfolded_mor.py to the cluster, respectively for inference between CVI islands and between cvi and morocco
 	simple_unfolded.py and simple_unfolded_mor.py run the actual dadi inference
 	demographic_models.py: the demographic models used
@@ -34,6 +36,7 @@ includes text files with results from 1000 replicated dadi runs with different s
 
 figures:
 three figures per model: 2d JSFS and the two marginal sfs from data and model with the highest likelihood parameters
+
 	pop-split_cvi_2d_rep436.png
 	pop-split_cvi_marginal0_rep436.png
 	pop-split_cvi_marginal1_rep436.png
