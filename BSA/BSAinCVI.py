@@ -66,9 +66,9 @@ for row in open(gatk, 'r'):
 			info = tmp2[len(tmp2)-1].split(':')
 				# print(int(tmp2[1]),int(genome[chrom][n][0]))
 			if int(tmp2[1]) == int(genome[chrom][n][0]):
-				allele = info[1].split(',')
 				alt = tmp2[4].split(',')
-				if '*' not in tmp2[4] and len(alt) == 2:
+				if '*' not in tmp2[4] and len(alt) == 2 and float(tmp2[5]) > 30.0:
+					allele = info[1].split(',')
 					ecotype = genome[chrom][n][len(genome[chrom][n])-1]
 					if ecotype == P1:
 						try:
@@ -86,9 +86,9 @@ for row in open(gatk, 'r'):
 			if n < len(genome[chrom]):
 				info = tmp2[len(tmp2)-1].split(':')
 				if int(tmp2[1]) == int(genome[chrom][n][0]):
-					allele = info[1].split(',')
 					alt = tmp2[4].split(',')
-					if '*' not in tmp2[4] and len(alt) == 2:
+					if '*' not in tmp2[4] and len(alt) == 2 and float(tmp2[5]) > 30.0:
+						allele = info[1].split(',')
 						ecotype = genome[chrom][n][len(genome[chrom][n])-1]
 						if ecotype == P1:
 							try:
