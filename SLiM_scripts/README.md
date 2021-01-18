@@ -8,10 +8,11 @@ Each folder contains the different selfing rates scripts shown as (90, 95 and 99
 
 To analyze and plot the result of the simulations along with the comparison of the CLUES inferred trajectory the following scripts were used. For each selfing rate 
 
-1. plot_functions_final_merge.R
-2. plot_local_sims.R To be used in the directory where the output of the simulations is stored. 
-The main output is the "ldf_*" file along with the simulated and inferred trajectory. 
+1. plot_functions_final.R
+2. plot_sims.R To be used in the directory where the output of the simulations is stored. 
+The main output is the "ldf_*" file along with the plot of the simulated and inferred trajectory. 
 
 For the supplementary figures this script needs to be used within the directory where the  "ldf_*" files are stored
 
-1. plot_sims_merge.R
+1. plot_functions_final_merge.R
+2. plot_sims_merge.R
