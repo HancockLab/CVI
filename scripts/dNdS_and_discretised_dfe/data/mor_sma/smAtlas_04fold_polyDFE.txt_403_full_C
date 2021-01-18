@@ -1,0 +1,88 @@
+---- Running command
+---- ./polyDFE -d /srv/netscratch/dep_coupland/grp_hancock/software/polyDFE-master/input/mor_sma/smAtlas_04fold_polyDFE.txt_403 
+---- Performing inference using model C
+
+---- Performing inference on /srv/netscratch/dep_coupland/grp_hancock/software/polyDFE-master/input/mor_sma/smAtlas_04fold_polyDFE.txt_403
+---- No mutation variability. Using Poisson likelihood.
+
+
+---- Calculating initial values
+
+-- Starting local optimization
+-- Optimizing all parameters
+  it        eps_an        lambda     theta_bar           S_d             b           p_b           S_b           r 2           r 3           r 4           r 5           r 6           r 7           r 8           r 9          r 10          r 11          r 12          r 13          r 14          r 15          r 16          r 17          r 18          r 19          r 20          r 21          r 22          r 23          r 24           ln lk          grad status 
+   0           0.1 0.12191832968 0.02108034353        -20000         0.406           0.1            20 1.07625998258 0.88371293141 1.21358169330 1.17754226812 1.21196943151 1.13776239560 1.20193041478 1.28155465030 1.35892171931 1.50841063232 1.71802616163 1.74689639605 1.82183432397 2.01726194954 2.09843395638 2.51755753087 2.95953222911 3.03858679880  3.9646592216 3.74102776314 7.17766050066             7             7 -273670.0459214 4620.17994851   -2 
+ 970 0.00174197978 0.12608675791 0.01876782819 -18.072855793 0.42800945003 0.00005066885 0.04146497638 0.98410450956 0.85133652809 1.25096708450 1.09604052586 1.10357089068 1.08392342504 1.12380391624 1.22083406313 1.24883621196 1.39384457216 1.49720169678 1.68959302306 1.68916513435 1.76880922428 1.85404683307 2.32647609876 2.74879465116 2.82007612822 3.43399573803 3.23185741280 5.92193129692 9.84855137675 1.28785669762 -332.6842585098 0.00147877398   -3 
+-- Local optimization: stuck in the same solution
+---- Best joint likelihood found -332.684258509836582 with gradient 0.00148
+
+---- Results for /srv/netscratch/dep_coupland/grp_hancock/software/polyDFE-master/input/mor_sma/smAtlas_04fold_polyDFE.txt_403 
+--  Model: C
+--        eps_an        lambda     theta_bar             a 
+-- 0.00174197978 0.12608675791 0.01876782819            -1 
+--           S_d             b           p_b           S_b 
+-- -18.072855793 0.42800945003 0.00005066885 0.04146497638 
+--           r 2           r 3           r 4           r 5           r 6           r 7           r 8           r 9          r 10          r 11          r 12          r 13          r 14          r 15          r 16          r 17          r 18          r 19          r 20          r 21          r 22          r 23          r 24 
+-- 0.98410450956 0.85133652809 1.25096708450 1.09604052586 1.10357089068 1.08392342504 1.12380391624 1.22083406313 1.24883621196 1.39384457216 1.49720169678 1.68959302306 1.68916513435 1.76880922428 1.85404683307 2.32647609876 2.74879465116 2.82007612822 3.43399573803 3.23185741280 5.92193129692 9.84855137675 1.28785669762 
+
+---- Expected P_neut(i), 0 < i < n (neutral SFS per site) 
+E[P_neut(1)] = 0.0187491342
+E[P_neut(2)] = 0.0092274657
+E[P_neut(3)] = 0.0053216663
+E[P_neut(4)] = 0.0058648727
+E[P_neut(5)] = 0.0041117459
+E[P_neut(6)] = 0.0034509175
+E[P_neut(7)] = 0.0029055386
+E[P_neut(8)] = 0.0026356157
+E[P_neut(9)] = 0.0025452431
+E[P_neut(10)] = 0.0023436561
+E[P_neut(11)] = 0.0023782369
+E[P_neut(12)] = 0.0023416020
+E[P_neut(13)] = 0.0024391237
+E[P_neut(14)] = 0.0022645640
+E[P_neut(15)] = 0.0022136934
+E[P_neut(16)] = 0.0021755812
+E[P_neut(17)] = 0.0025689944
+E[P_neut(18)] = 0.0028670709
+E[P_neut(19)] = 0.0027879301
+E[P_neut(20)] = 0.0032270432
+E[P_neut(21)] = 0.0028925769
+E[P_neut(22)] = 0.0050591860
+E[P_neut(23)] = 0.0080550384
+
+---- Expected P_sel(i), 0 < i < n (selected SFS per site) 
+E[P_sel(1)] = 0.0136717769
+E[P_sel(2)] = 0.0055067353
+E[P_sel(3)] = 0.0027666911
+E[P_sel(4)] = 0.0027534419
+E[P_sel(5)] = 0.0017824300
+E[P_sel(6)] = 0.0014019806
+E[P_sel(7)] = 0.0011179417
+E[P_sel(8)] = 0.0009678603
+E[P_sel(9)] = 0.0008972604
+E[P_sel(10)] = 0.0007967664
+E[P_sel(11)] = 0.0007826149
+E[P_sel(12)] = 0.0007481292
+E[P_sel(13)] = 0.0007585042
+E[P_sel(14)] = 0.0006869081
+E[P_sel(15)] = 0.0006561860
+E[P_sel(16)] = 0.0006312036
+E[P_sel(17)] = 0.0007304915
+E[P_sel(18)] = 0.0008000650
+E[P_sel(19)] = 0.0007645174
+E[P_sel(20)] = 0.0008707226
+E[P_sel(21)] = 0.0007685016
+E[P_sel(22)] = 0.0013248891
+E[P_sel(23)] = 0.0020855692
+
+---- Expected D_neut and D_sel (neutral and selected divergence per site) 
+E[D_neut] = 0.1270938526
+E[D_sel] = 0.0317772909
+
+---- Expected neutral and selected misattributed polymorphism per site
+E[mis_neut] = 0.0010070947
+E[mis_sel] = 0.0002552000
+
+---- alpha_div = -0.018628
+---- alpha_dfe = 0.000207
+
