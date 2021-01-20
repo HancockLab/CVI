@@ -1,4 +1,4 @@
-package c.e.noFiltering;
+package c.e.data_processing;
 
 import java.io.File;
 import java.lang.Math;
@@ -20,7 +20,7 @@ import java.util.Collections;
 
 
 
-public class mpileupBuild_janeiroAllFiltStrandOut_checkCalls {
+public class mpileupBuild_janeiroAllFiltStrandOut {
 	
 
 	private BitSet[] mask = null;
@@ -50,7 +50,7 @@ public class mpileupBuild_janeiroAllFiltStrandOut_checkCalls {
 	int run =0;
 	String[] splitName = null;
 		
-	public mpileupBuild_janeiroAllFiltStrandOut_checkCalls() {}
+	public mpileupBuild_janeiroAllFiltStrandOut() {}
 	
 	
 	public void setSnpFile(String filename, String wereWeResults){
@@ -606,7 +606,7 @@ public class mpileupBuild_janeiroAllFiltStrandOut_checkCalls {
 	}
 	
 	public static void main(String[] args) {
-		mpileupBuild_janeiroAllFiltStrandOut_checkCalls MpileupBuild_janeiroAllFiltStrandOut_checkCalls = new mpileupBuild_janeiroAllFiltStrandOut_checkCalls();
-		MpileupBuild_janeiroAllFiltStrandOut_checkCalls.setSnpFile(args[0], args[1]);
+		mpileupBuild_janeiroAllFiltStrandOut MpileupBuild_janeiroAllFiltStrandOut = new mpileupBuild_janeiroAllFiltStrandOut();
+		MpileupBuild_janeiroAllFiltStrandOut.setSnpFile(args[0], args[1]);
 	}
 }
