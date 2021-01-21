@@ -38,7 +38,7 @@ clues_timebins="/path_to_directory/"
 ################# (1) Processing the VCF file ################
 ##############################################################
 
-################### Remove non-biallelic SNPs, filtering for quality, retained segregating sites
+################### Remove non-biallelic SNPs, filtering for quality, retained segregating sites, and filtered out missing data
 $bcftools view -m2 -M2 -v snps –min-ac=1 -i 'MIN(FMT/DP)>3 & MIN(FMT/GQ)>25 & F_MISSING=0' CVI_SHORE.vcf > CVI_SHORE_filtered.vcf
 
 ################### gzip VCF file
