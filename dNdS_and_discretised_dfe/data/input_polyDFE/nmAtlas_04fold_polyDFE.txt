@@ -1,0 +1,19 @@
+# DFE for North Middle Atlas polarised to lyrata
+# 0-fold, 4-fold
+
+#	Whole genome (1 fragment neutral, 1 selected), 98 samples
+# 
+1	1	13
+
+
+#	Neutral: 4-fold degenerate
+# 
+
+6977	3814	2916	2643	2105	2072	1988	1893	2143	2188	2645	3629	562650	79465	562650
+
+#	Selected: 0-fold degenerate
+# 
+
+12253	5717	3957	2903	2189	2108	2006	1750	2056	2002	2264	3055	1590311	56591	1590311
+
+

@@ -1,0 +1,22 @@
+# DFE for Santo Antao
+# 0-fold, 4-fold
+
+#	Whole genome (1 fragment neutral, 1 selected), 98 samples
+# 
+1	1	13
+
+
+#	Neutral: 4-fold degenerate
+# 
+
+# One Per stand
+99	43	14	6	2	8	8	2	5	3	3	3	1332660	1	1332660
+
+
+#	Selected: 0-fold degenerate
+# 
+
+# One per stand
+318	136	67	27	21	23	28	20	12	7	7	4	5967270	10	5967270
+
+

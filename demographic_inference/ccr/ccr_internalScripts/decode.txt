@@ -1,0 +1,1 @@
+$HOME/software/msmc2-2.0.0/build/./decode 

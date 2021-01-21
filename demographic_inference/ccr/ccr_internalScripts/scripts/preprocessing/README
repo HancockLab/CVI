@@ -1,0 +1,10 @@
+This directory is for making cross coalescent plots.
+
+
+ORDER of scripts
+1. create_comparisons
+2. run_merge.sh
+3. create_cross_coal_input.sh
+4. run_msmc.sh
+5. run_combine.sh
+6. plot_ccr2.R

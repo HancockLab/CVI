@@ -1,0 +1,20 @@
+# DFE for High Atlas polarised to lyrata
+# 0-fold, 4-fold
+
+#	Whole genome (1 fragment neutral, 1 selected), 98 samples
+# 
+1	1	16
+
+
+#	Neutral: 4-fold degenerate
+# 
+
+8205	4554	3151	2621	2247	1888	1874	1801	1768	1692	1868	2075	2350	2763	3541	562290	76127	562290
+
+#	Selected: 0-fold degenerate
+# 
+
+15221	6335	4008	3002	2451	2048	1865	1797	1746	1471	1626	1702	1938	2142	2830	1594080	53527	1594080
+
+
+

@@ -1,0 +1,70 @@
+#!/bin/bash
+#
+#SBATCH -J shore_
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=1
+#SBATCH --ntasks-per-core=1
+#SBATCH --mail-type=END,FAIL    # first have to state the type of event to occur 
+#SBATCH --mail-user=<andrea.fulgione@univie.ac.at>   # and then your email address
+
+### Run as:
+## ./windows_runCvi.slrm ${num_iterates} ${num_replicates} ${split_time}
+## Where num_iterates and num_replicates are effectively the same thing, but used differently for parallelization
+
+
+export I_MPI_PMI_LIBRARY=/cm/shared/apps/slurm/current/lib/libpmi.so
+export BWA=/home/lv70590/Andrea/bwa-0.7.5a
+export GENOMEMAPPER=/home/lv70590/Andrea/genomemapper0.4.3
+
+module load java/1.8.0_121 intel/16 intel-mpi/5.1 intel-mkl/11 gsl/2.2 hdf5/1.8.16 python/2.7 msprime/0.4.0 numpy/1.9.1 scipy/0.18.0
+
+echo "go Msprime!"
+###
+#	Cvi to High Atlas
+###
+python cvi_toHa_windows.py ${1} ${2} ${3}
+
+workDir= # Path to working directory
+mkdir -p $workDir
+
+vcfSim=${workDir}/vcf/cvi_winToHa${3}
+mkdir -p ${workDir}/vcf
+mkdir -p ${workDir}/theta
+mkdir -p ${workDir}/msmc
+
+numWin=1429
+
+cd ${HOME}/java/projects/
+
+for repl in {0..9}
+ do
+ cd $HOME/java/projects/
+ java -Xmx4G -classpath ~/java/lib/junit.jar:~/java/lib/jbzip2-0.9.1.jar:~/java/lib/args4j-2.0.12.jar:~/java/lib/commons-compress-1.0.jar:~/java/lib/gson-1.6-javadoc.jar:~/java/lib/gson-1.6-sources.jar:~/java/lib/gson-1.6.jar:bin c.e.data_processing.CombineWindowsToTheGhost ${vcfSim}_Chr _${1}_${repl}.vcf ${numWin}
+ 
+ ###
+ #		Java, to run windows as in the comparison cvi - ha
+ ###
+ cvi=./data/cvi_sim_toHa.txt
+ ha=./data/ha_sim_toHa.txt
+ mkdir -p ${workDir}/win_simpleSplit
+ results=${workDir}/win_simpleSplit/singleWin_${3}k_cviHa_${1}_${repl}
+ matrix=${vcfSim}_ChrAll_${1}_${repl}.vcf
+ for win in 50000
+ do
+	mkdir -p ${results}_${win}
+ 	java -Xmx4G -classpath ~/java/lib/junit.jar:~/java/lib/jbzip2-0.9.1.jar:~/java/lib/args4j-2.0.12.jar:~/java/lib/commons-compress-1.0.jar:~/java/lib/gson-1.6-javadoc.jar:~/java/lib/gson-1.6-sources.jar:~/java/lib/gson-1.6.jar:bin c.e.data_processing.Pairwise_shore_cviMor_forWinSimula ${matrix} ${results} ${win} ${cvi} ${ha} ${numWin}
+ done
+ 
+ # Clean up
+ bgzip -c ${vcfSim}_ChrAll_${1}_${repl}.vcf > ${vcfSim}_ChrAll_${1}_${repl}.vcf.b.gz
+ rm ${vcfSim}_ChrAll_${1}_${repl}.vcf
+ for d in {0..1429}
+ do
+  rm ${vcfSim}_Chr${d}_${1}_${repl}.vcf
+ done
+ 
+ 
+ 
+ done
+echo "gone :))"
+
