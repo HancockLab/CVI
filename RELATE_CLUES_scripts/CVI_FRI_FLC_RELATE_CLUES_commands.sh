@@ -5,7 +5,7 @@
 
 ################ Contents shown in this file:
 # (1) Processing the VCF file
-# (2) Infer the genome-wide genealogies
+# (2) Infer the genome-wide genealogies using RELATE
 # (2) Infer the local genealogy for FRI (Chr4:269719) and FLC (Chr5: 3179333) using RELATE
 # (3) Estimate the selection and allele frequency trajectory using CLUES
 
