@@ -1,8 +1,7 @@
 ###
 # dN/dS, dfe and alpha
 ###
-
-Scripts to compute and plot dN/dS, dfe and alpha.
+Testing for evidence of adaptive evolution by computing dN/dS, dfe and alpha.
 The dN/dS ratio was computed with custom scripts. Dfe and alpha were inferred by polyDFE (Tataru et al. 2017). 
 
 For the dN/dS ratio:

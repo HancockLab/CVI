@@ -2,8 +2,7 @@
 #	QTLs, candidate genes and functional variants: 
 ###
 
-We conducted a literature review of studies that used the Cvi-0 x Ler-0 RILs and, based on these studies and fine mapping, we compiled a list of QTL regions, candidate genes and functional variants. 
-Then, we tested the percentage of private variation across functional categories
+Testing the percentage of private variation across QTL regions, candidate genes and functional variants
 
 ###
 

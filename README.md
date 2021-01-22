@@ -6,15 +6,43 @@ Authors: Andrea Fulgione1,2,3*, Célia Neto1*, Ahmed F. Elfarargi1, Emmanuel Ter
 
 The analyses are based on a vcf file shared in EVA (European Variation Archive), accession number:
 
-## genotype_calling
+
+## Folders:
+
+### genotype_calling
 
 Contains the pipelines used for genotype calling in the paper.
 
+### data
+
+Contains supporting data for scripts and analyses.
+
+### java_programs
+
+Java programs to preprocess the vcf, produce input files for analyses and compute summary statistics on the genomic data.
+
+### population_structure
+
+Scripts for the inference of population structure in Cape Verde Islands and worldwide accessions
+
+### demographic_inference
+
+Scripts for the inference of population structure in Cape Verde Islands and worldwide accessions
+
+### dNdS_dfe_alpha
+
+Script to test for evidence of adaptive evolution by computing dN/dS, dfe and alpha.
+
+### qtl_candidate-genes_functional-variants
+
+Testing the percentage of private variation across QTL regions, candidate genes and functional variants
+
+### gwas_and_flowering_time_fitness_analyses
+
+Scripts to identify variants involved in flowering time and fitness in Santo Antao and Fogo. Also, scripts to analyse and compute summary statistics from flowering time and fitness data 
+
+### adaptive_variants_history
+
+Scripts to infer the history of adaptive variants in CVI (FRI and FLC) with relate and clues, and scripts to simulate the history of adaptive variants with slim
 
 
-
-<<<<<<< HEAD
-=======
-Scripts and files for the Cape Verde Arabidopsis release paper
-
->>>>>>> 1d0bd86a2d908a5808371ec0bb46ec7e97fb70ce
