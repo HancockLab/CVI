@@ -1,7 +1,0 @@
-#!/bin/bash
-#
-
-# for i in {0..66}; do for j in {0..19};do if [ -f "/global/lv70590/Andrea/analyses/chromoPcan_10-18/${i}/${j}/results/100_1000.prop.out" ]; then x=$(cat /global/lv70590/Andrea/analyses/chromoPcan_10-18/${i}/${j}/results/100_1000.prop.out | wc -l); if [ ${x} -lt 2 ]; then echo ${x};sbatch canRun.slrm ${i} ${j}; fi; else sbatch canRun.slrm ${i} ${j}; fi; done; done
-
-java -Xmx4G -classpath ~/java/lib/junit.jar:~/java/lib/jbzip2-0.9.1.jar:~/java/lib/args4j-2.0.12.jar:~/java/lib/commons-compress-1.0.jar:~/java/lib/gson-1.6-javadoc.jar:~/java/lib/gson-1.6-sources.jar:~/java/lib/gson-1.6.jar:bin c.e.data_processing/ChromoP_manageResults ${1}
-
