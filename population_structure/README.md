@@ -8,6 +8,6 @@ Scripts to produce and plot neighbor joining trees for CVI and worldwide accessi
 
 ## chromopainter
 
-Scripts to infer and plot the closest relative population to focus samples across gene genealogies with chromoPainter (Lawson et l. 2012)
+Scripts to infer and plot the closest relative population to focus samples across gene genealogies with chromoPainter (Lawson et al. 2012)
 
 

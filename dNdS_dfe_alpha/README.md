@@ -18,11 +18,9 @@ For the dN/dS ratio:
 Necessary input files
 ### functionalMasks.command:		
 Creates masks for 0- and 4-fold degenerate sites and more masks based on estimated effects from snpEFF
-### figures:				
-Receives plotted figures
 ### dnds_plot.py:			
-Takes care of plotting and stats on the dN/dS ratios
-### dfe_lounch.command:			
+Plotting and stats on the dN/dS ratios
+### dfe_launch.command:			
 Launches polyDFE on different input files for different populations. To run on bootstrapped data sets, first bootstrap the spectra with polyDfe as in discretised_dfe.R
 ### dfe_poly.command:			
 Runs polyDFE. The first command uses defaults parameters, the following are to play around with parameters and models

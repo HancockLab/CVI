@@ -17,5 +17,5 @@ Scripts to infer the history of populations with dadi (Gutenkunst et al, 2009)
 ## within_CVI_inference
 
 Scripts to infer different components of the history within the archipelago
-e.g., Which island was colonised first, what was population size at colonization of the second one...
+e.g., Which island was colonised first, what was population size at colonization of the second island, ecc.
 
