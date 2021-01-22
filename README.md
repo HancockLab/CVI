@@ -13,3 +13,8 @@ Contains the pipelines used for genotype calling in the paper.
 
 
 
+<<<<<<< HEAD
+=======
+Scripts and files for the Cape Verde Arabidopsis release paper
+
+>>>>>>> 1d0bd86a2d908a5808371ec0bb46ec7e97fb70ce
