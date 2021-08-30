@@ -6,7 +6,7 @@ cd ${gitPath}
 plink="path to plink"
 vcf="path to the large .vcf available in EVA"
 vcfNew="insert full path for the new subset vcf"
-out=./data/cviPaperNj_all20_2020-05-21_nj
+out=./data/cviPaperNj
 
 # If you want NJ within CVi:
 # 

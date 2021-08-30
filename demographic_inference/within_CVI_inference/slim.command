@@ -1,7 +1,7 @@
 #!/bin/bash
 
 slim= # Path to slim
-params=./CVI/scripts/demographic_inference/slim_simulations/cvi_3.slim
+params=./CVI/demographic_inference/within_CVI_inference/cvi_3.slim
 results= # Path to results - Warning! This path has to match two paths in cvi_3.slim
 
 mkdir -p ${results}
@@ -15,8 +15,8 @@ ${slim}/slim -d repl=${1} -d Ns=${2} -d Nf=${3} -d Tf=${4} -d Ttot=${5} -d NsSta
 ##	Compute jsfs		
 ####
 
-santo=./CVI/scripts/demographic_inference/slim_simulations/data/santos_simula.txt
-fogo=./CVI/scripts/demographic_inference/slim_simulations/data/fogos_simula.txt
+santo=./CVI/demographic_inference/within_CVI_inference/data/santos_simula.txt
+fogo=./CVI/demographic_inference/within_CVI_inference/data/fogos_simula.txt
 matrix=${results}/cvi3_Ttot${5}_nsStart${6}_nfStart${7}_ns${2}_nf${3}_tf${4}_rep${1}.vcf
 #bgzip -cd ${matrix}.b.gz > ${matrix}
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # input files in:
-# ./CVI/scripts/dNdS_and_discretised_dfe/data/input_polyDFE/*_polyDFE.txt 
+# ./CVI/ dNdS_dfe_alpha/data/input_polyDFE/*_polyDFE.txt 
 
 
 infile=${1}

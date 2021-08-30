@@ -2,7 +2,7 @@
 # Run as:
 # Rscript plotProportions_chromoP_cvi.R
 
-setwd("./scripts/population_structure/chromopainter")
+setwd("./CVI/population_structure/chromopainter/")
  
 # 
 
@@ -14,7 +14,7 @@ stErr = vector()
 #        Continental groups
 ###
 
-m = as.matrix(read.table("./results/0_propIterate.txt", head=T))
+m = as.matrix(read.table("path_to_first_result_file", head=T))
 cviNames = as.String(as.matrix(read.table("./data/chromop_samples_cviPaper.txt", head=F))[,1])
 
 sa_col= "#0075DC"
@@ -43,7 +43,7 @@ for (c in 1:length(s)) {
   means = vector()
   stErr = vector()
   # Continents
-  m = as.matrix(read.table( paste("./results/", are, "_propIterate.txt", sep=""), head=T))
+  m = as.matrix(read.table( paste("path_to_results_files", are, "_propIterate.txt", sep=""), head=T))
   for (c in 1:length(order)) {
     col=order[[c]]	
     means[[c]] = mean(m[,col])
@@ -62,7 +62,7 @@ arrow.end <- matrMean-(matrStErr*1.96)
 
 
 setEPS()
-postscript("./figures/edf2a.eps", width=7, height=3)
+postscript("./figure_chromoP.eps", width=7, height=3)
 par(ps=7, mfrow=c(1,1), mar=c(2,1.4,0.5,0.)) # , mgp=c(3, -0.2, 3))
 
 par(mfrow=c(1,1), mar=c(5,5,3,3))

@@ -2,13 +2,13 @@
 # Run as:
 # Rscript discretised_dfe.R
 
-setwd("./scripts/dNdS_and_discretised_dfe/")
+setwd("./CVI/dNdS_dfe_alpha/")
 source("Path_to_/polyDFE-master/postprocessing.R")
 
 ###
 #		Tobootstrap the spectra for dN/dS:
 ###
-sfsFile=# ./CVI/scripts/dNdS_and_discretised_dfe/data/input_polyDFE/*_polyDFE.txt
+sfsFile=# ./CVI/dNdS_dfe_alpha/data/input_polyDFE/*_polyDFE.txt
 bootstrapData(sfsFile, rep = 500)
 
 
@@ -27,9 +27,13 @@ dnds_ha=read.table("./data/mor-ha_bootDnDs.txt")[,1]
 dnds_nma=read.table("./data/mor-nma_bootDnDs.txt")[,1]
 dnds_sma=read.table("./data/mor-sma_bootDnDs.txt")[,1]
 dnds_rif=read.table("./data/mor-rif_bootDnDs.txt")[,1]
+dnds_mor=read.table("./data/morocco_polyDFE_bootDnDs.txt")[,1]
 
-wilcox.test(x=c(dnds_sa, dnds_fo), y=c(dnds_ha, dnds_nma, dnds_sma, dnds_rif), paired = F)
+wilcox.test(x=c(dnds_sa, dnds_fo), y=c(dnds_mor), paired = F)
 
+dnds_cvi=read.table("./data/cviLongBranch_bootDnDs.txt")[,1]
+wilcox.test(x=c(dnds_sa, dnds_fo), y=c(dnds_cvi), paired = F)
+range(dnds_mor)
 # 
 
 # Fogo, Santo
@@ -66,7 +70,7 @@ print(dfe)
 #       Plot dfe for all pops
 ###
 
-pdf("./figures/fig2b.pdf", height=1.7, width=2.2)
+pdf("./fig_dfe.pdf", height=1.7, width=2.2)
 par(ps=7, mfrow=c(1,1), mar=c(2,1.4,0.5,0.), mgp=c(3, -0.2, 3))
 
 sa_col= "#0075DC"

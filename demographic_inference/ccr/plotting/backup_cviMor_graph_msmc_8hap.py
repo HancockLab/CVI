@@ -2,7 +2,7 @@
 
 ###
 #	To run from terminal as:
-# 	python ./scripts/demographic_inference/ccr/scripts/./backup_cviMor_graph_msmc_8hap.py -l "Cvi - Morocco-h","Cvi - Morocco-n","Cvi - Morocco-s" -f ./scripts/demographic_inference/ccr/data/cvi-ha_comparisons.txt,./scripts/demographic_inference/ccr/data/cvi-nma_comparisons.txt,./scripts/demographic_inference/ccr/data/cvi-sma_comparisons.txt -o ./scripts/demographic_inference/ccr/figures/edf3a
+# 	python ./demographic_inference/ccr/scripts/./backup_cviMor_graph_msmc_8hap.py -l "Cvi - Morocco-h","Cvi - Morocco-n","Cvi - Morocco-s" -f ./demographic_inference/ccr/data/cvi-ha_comparisons.txt,./demographic_inference/ccr/data/cvi-nma_comparisons.txt,./demographic_inference/ccr/data/cvi-sma_comparisons.txt -o ./demographic_inference/ccr/figure_ccr_cviMor
 ###
 
 

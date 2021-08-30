@@ -1,7 +1,9 @@
 #!/bin/bash
 
-# run as ./fulgiP.command $rawFile $file $workDir $whereWe
+# run as ./fulgiP.command ${rawFile} ${newFile} ${working_directory} ${saving_directory}
+# Where ${rawFile} is the prefix of fastq files, see lines 19, 20
 
+gitFold="pathToGithubFolder"
 cd ./CVI/java_programs/java/projects/
 
 rawFile=$1
@@ -16,12 +18,12 @@ REF= # Path to reference genome
 # ${HOME}/ATwithSlociCollection2/atAndSlociColl02.fa
 
 #
-gzip -cd "Decompress fastq file 1 into:" > ${file}.1.fastq
-gzip -cd "Decompress fastq file 1 into:" > ${file}.2.fastq
+gzip -cd ${rawFile}_1.fastq > ${file}.1.fastq
+gzip -cd ${rawFile}_2.fastq > ${file}.2.fastq
 
 # Remove adapters
 #
-adaptersFile=./data/adapters.txt # Path to adapters file
+adaptersFile=${gitFold}/data/adapters.txt	# Path to adapters file
 sleep 30s
 "Path to adapterremoval-2.1.2"/build/./AdapterRemoval --file1 ${file}.1.fastq --file2 ${file}.2.fastq --basename ${file} --trimns --trimqualities --adapter-list ${adaptersFile}
 #  --qualitymax 42 for illumina X

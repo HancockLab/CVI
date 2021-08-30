@@ -3,7 +3,7 @@
 
 ###
 #	To run from terminal as:
-#	python ./scripts/demographic_inference/ccr/scripts/./backup_wtSaFo_graph_msmc_8hap.py -l "S_cova-S1S8","S_cova-S_pico","S_cova-S_espong","S1S8-S_pico","S1S8-S_espong","S_pico-S_espong","Fogo - Santo Antao" -f ./scripts/demographic_inference/ccr/data/wtSanto_2020-05-14_s20-s1s8_comparisons.txt,./scripts/demographic_inference/ccr/data/wtSanto_2020-05-14_s20-s10_comparisons.txt,./scripts/demographic_inference/ccr/data/wtSanto_2020-05-14_s20-s11_comparisons.txt,./scripts/demographic_inference/ccr/data/wtSanto_2020-05-14_s1s8-s10_comparisons.txt,./scripts/demographic_inference/ccr/data/wtSanto_2020-05-14_s1s8-s11_comparisons.txt,./scripts/demographic_inference/ccr/data/wtSanto_2020-05-14_s11-s10_comparisons.txt,./scripts/demographic_inference/ccr/data/cvi_comparisons.txt -o edf5b
+#	python ./demographic_inference/ccr/scripts/./backup_wtSaFo_graph_msmc_8hap.py -l "S_cova-S1S8","S_cova-S_pico","S_cova-S_espong","S1S8-S_pico","S1S8-S_espong","S_pico-S_espong","Fogo - Santo Antao" -f ./demographic_inference/ccr/data/wtSanto_2020-05-14_s20-s1s8_comparisons.txt,./demographic_inference/ccr/data/wtSanto_2020-05-14_s20-s10_comparisons.txt,./demographic_inference/ccr/data/wtSanto_2020-05-14_s20-s11_comparisons.txt,./demographic_inference/ccr/data/wtSanto_2020-05-14_s1s8-s10_comparisons.txt,./demographic_inference/ccr/data/wtSanto_2020-05-14_s1s8-s11_comparisons.txt,./demographic_inference/ccr/data/wtSanto_2020-05-14_s11-s10_comparisons.txt,./demographic_inference/ccr/data/cvi_comparisons.txt -o figure_ccr_wt
 ###
 
 

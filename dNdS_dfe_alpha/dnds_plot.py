@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import os
+os.chdir('./CVI/dNdS_dfe_alpha')
 
 ###
 #    Plot main figure for  dN/dS
@@ -48,7 +50,7 @@ file_list=["./data/fo_bootDnDs.txt",
            "./data/mor-ha_bootDnDs.txt", "./data/mor-sma_bootDnDs.txt", "./data/mor-nma_bootDnDs.txt", "./data/mor-rif_bootDnDs.txt"]
 
 order_list=[1, 
-             2, 3, 4, 5, 6, 7, 9, 8, 10, 11 , 12, 13, 14, 15]
+             2, 3, 4, 5, 6, 7, 9, 8, 10, 11 , 12, 13, 14]
 
 
 
@@ -96,21 +98,35 @@ nonCvi_df  = df[(df['Group'] != 'sa') & (df['Group'] != 'fo')]
 
 
 
-file_list=[#"./data/cviLongBranch_bootDnDs.txt", 
-           "./data/sa_bootDnDs_2.txt",
-           "./data/fo_bootDnDs_2.txt"]
-           # "./data/eurasia_bootDnDs.txt"]
+file_list=[
+            # First is: "./data/wEurope_bootDnDs.txt",
+            "./data/spain_bootDnDs.txt", 
+            "./data/relicts_bootDnDs.txt",
+            "./data/germany_bootDnDs.txt", 
+            "./data/sSweden_bootDnDs.txt",  
+            "./data/nSweden_bootDnDs.txt", 
+            "./data/cEurope_bootDnDs.txt", 
+            "./data/ibc_bootDnDs.txt", 
+            "./data/asia_bootDnDs.txt", 
+            "./data/mor-rif_bootDnDs.txt", 
+            "./data/mor-nma_bootDnDs.txt", 
+            "./data/mor-sma_bootDnDs.txt",
+            "./data/mor-ha_bootDnDs.txt", 
+            "./data/sa_bootDnDs.txt",
+            "./data/fo_bootDnDs.txt"]
+            # "./data/eurasia_bootDnDs.txt"]
+            #"./data/cviLongBranch_bootDnDs.txt", 
 
 
 # With Mor and Euras grouped:
-df_grouped=pd.read_csv("./data/sa_bootDnDs_2.txt",
+df_grouped=pd.read_csv("./data/sa_bootDnDs.txt",
            # delim_whitespace=True,
            header=None,
            names=['sa'],
            skipinitialspace=False,
            sep='\t')
 
-df_grouped_forSeaborn=pd.read_csv("./data/mor-all_bootDnDs.txt",
+df_grouped_forSeaborn=pd.read_csv("./data/wEurope_bootDnDs.txt", # "./data/mor-all_bootDnDs.txt",
            # delim_whitespace=True,
            header=None,
            names=['dnds'],
@@ -118,7 +134,7 @@ df_grouped_forSeaborn=pd.read_csv("./data/mor-all_bootDnDs.txt",
            sep='\t')
 
 
-df_grouped_forSeaborn_halfSwarm=pd.read_csv("./data/sa_bootDnDs_2.txt",
+df_grouped_forSeaborn_halfSwarm=pd.read_csv("./data/sa_bootDnDs.txt",
            # delim_whitespace=True,
            header=None,
            names=['dnds'],
@@ -126,7 +142,7 @@ df_grouped_forSeaborn_halfSwarm=pd.read_csv("./data/sa_bootDnDs_2.txt",
            sep='\t')
 
 
-group=['mor' for i in range(df_grouped_forSeaborn.shape[0])]
+group=['wEurope' for i in range(df_grouped_forSeaborn.shape[0])]
 order=[order_list[file] for i in range(df_grouped_forSeaborn.shape[0])]
 df_grouped_forSeaborn['Group'] = group
 df_grouped_forSeaborn['Order'] = order
@@ -162,7 +178,7 @@ print(df_grouped_forSeaborn_halfSwarm)
 
 
 
-
+print(len(file_list))
 for file in range(len(file_list)):
     # print(file_list[file])
     name=file_list[file].split("/")[len(file_list[file].split("/"))-1].split("_")[0]
@@ -191,8 +207,6 @@ df_grouped_forSeaborn_2['dnds'] = np.log10(df_grouped_forSeaborn_2['dnds'])
 
 
 
-
-
 ###
 #    FINAL: the main figure here
 #    
@@ -202,13 +216,18 @@ plt.clf()
 plt.figure(figsize=(18,6))
 sns.set_style('white')
 
-collors_light=[(240/255,163/255,255/255, 0.3), (43/255,206/255,72/255, 0.3), (255/255,164/255,5/255, 0.3), (0/255,92/255,49/255, 0.3)]
-collors_full=[(240/255,163/255,255/255, 0.9), (43/255,206/255,72/255, 0.9), (255/255,164/255,5/255, 0.9), (0/255,92/255,49/255, 0.9)]
-collors_total=[(240/255,163/255,255/255, 1.), (43/255,206/255,72/255, 1.), (255/255,164/255,5/255, 1.), (0/255,92/255,49/255, 1.)]
-
-collors_light=[(43/255,206/255,72/255, 0.3), (0,117/255,220/255, 0.3), (255/255,164/255,5/255, 0.3)]
-collors_full=[(43/255,206/255,72/255, 0.9), (0,117/255,220/255, 0.9), (255/255,164/255,5/255, 0.9)]
-collors_total=[(43/255,206/255,72/255, 1.), (0,117/255,220/255, 1.), (255/255,164/255,5/255, 1.)]
+collors_light=[
+    (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), (240/255,164/255,255/255, 0.3), 
+    (43/255,206/255,72/255, 0.3), (43/255,206/255,72/255, 0.3), (43/255,206/255,72/255, 0.3), (43/255,206/255,72/255, 0.3), 
+    (0,117/255,220/255, 0.3), (255/255,164/255,5/255, 0.3)]
+collors_full=[
+    (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), (240/255,164/255,255/255, 0.9), 
+    (43/255,206/255,72/255, 0.9), (43/255,206/255,72/255, 0.9), (43/255,206/255,72/255, 0.9), (43/255,206/255,72/255, 0.9), 
+    (0,117/255,220/255, 0.9), (255/255,164/255,5/255, 0.9)]
+collors_total=[
+    (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), (240/255,164/255,255/255, 1.), 
+    (43/255,206/255,72/255, 1.), (43/255,206/255,72/255, 1.), (43/255,206/255,72/255, 1.), (43/255,206/255,72/255, 1.), 
+    (0,117/255,220/255, 1.), (255/255,164/255,5/255, 1.)]
 
 fig=sns.boxplot(x=df_grouped_forSeaborn_2['Group'], y=df_grouped_forSeaborn_2['dnds'], data=df_grouped_forSeaborn_2, palette=collors_full, showfliers=False, linewidth=0.1) # palette='colorblind'
 
@@ -235,22 +254,21 @@ print("checked")
 
 
 dfCvi=df_grouped_forSeaborn_2[df_grouped_forSeaborn_2["Group"].isin(['sa', 'fo'])]
-fig=sns.swarmplot(x=dfCvi['Group'], y=dfCvi['dnds'], data=dfCvi, color="k", size = 2.)
+# fig=sns.swarmplot(x=dfCvi['Group'], y=dfCvi['dnds'], data=dfCvi, color="k", size = 2.)
 
+# If you comment out above, comment out also below :)
 
+# c0 = fig.get_children()[0]
+# x,y = np.array(c0.get_offsets()).T
+# xnew=x+13
+# offsets = list(zip(xnew,y))
+# c0.set_offsets(offsets)
 
-c0 = fig.get_children()[0]
-x,y = np.array(c0.get_offsets()).T
-xnew=x+1
-offsets = list(zip(xnew,y))
-c0.set_offsets(offsets)
-
-
-c1 = fig.get_children()[1]
-x,y = np.array(c1.get_offsets()).T
-xnew=x+1
-offsets = list(zip(xnew,y))
-c1.set_offsets(offsets)
+# c1 = fig.get_children()[1]
+# x,y = np.array(c1.get_offsets()).T
+# xnew=x+13
+# offsets = list(zip(xnew,y))
+# c1.set_offsets(offsets)
 
 
 
@@ -261,7 +279,7 @@ c1.set_offsets(offsets)
 ##
 #      Read the actual observed values
 ##
-df_obs=pd.read_csv("./data/morocco-mean_bootDnDs_actualData.txt",
+df_obs=pd.read_csv("./data/wEurope_bootDnDs_actualData.txt", # "./data/morocco-mean_bootDnDs_actualData.txt",
            header=None,
            names=['dnds'],
            skipinitialspace=False,
@@ -272,10 +290,21 @@ df_obs['Group'] = group
 df_obs['Order'] = order
 
 file_list=[
+    "./data/spain_bootDnDs_actualData.txt", 
+    "./data/relicts_bootDnDs_actualData.txt",
+    "./data/germany_bootDnDs_actualData.txt", 
+    "./data/sSweden_bootDnDs_actualData.txt",  
+    "./data/nSweden_bootDnDs_actualData.txt", 
+    "./data/cEurope_bootDnDs_actualData.txt", 
+    "./data/ibc_bootDnDs_actualData.txt", 
+    "./data/asia_bootDnDs_actualData.txt", 
+    "./data/mor-rif_bootDnDs_actualData.txt",
+    "./data/mor-nma_bootDnDs_actualData.txt",
+    "./data/mor-sma_bootDnDs_actualData.txt",
+    "./data/mor-ha_bootDnDs_actualData.txt",
     "./data/santo_bootDnDs_actualData.txt",
     "./data/fogo_bootDnDs_actualData.txt"]
     
-order_list=[2, 3, 4]
 
 for file in range(len(file_list)):
     name=file_list[file].split("/")[len(file_list[file].split("/"))-1].split("_")[0]
@@ -285,7 +314,7 @@ for file in range(len(file_list)):
         skipinitialspace=False,
         sep='\t')
     df_obs2['Group'] = 'dnds'
-    df_obs2['Order'] = order_list[file]
+    df_obs2['Order'] = file+2
     
     df_obs=df_obs.append(df_obs2)
     
@@ -293,7 +322,7 @@ print(df_obs)
 
 #     Now plot
 df_obs_new = pd.DataFrame(dict(xx=df_obs['Order'], yy=np.log10(df_obs['dnds'])))
-fig=sns.swarmplot(x='xx', y='yy', data=df_obs_new, size = 5, palette=collors_total, marker="D", edgecolor="black", linewidth=0.5)
+fig=sns.swarmplot(x='xx', y='yy', data=df_obs_new, size = 4, palette=collors_total, marker="D", edgecolor="black", linewidth=0.5)
 
 ###
 #
@@ -306,7 +335,7 @@ fig.set(xlabel=None)
 
 # X axis
 # 
-ordered=['Mor', 'SA', 'Fogo']
+ordered=['WE', 'SP', 'IR', 'GE', 'SS', 'NS', 'CE', 'IB', 'CA', 'MR', 'MN', 'MS', 'MH', 'SA', 'FO']
 fig.set_xticklabels(ordered)
 
 # Y axis
@@ -319,9 +348,18 @@ fig.set_yticks([np.log10(0.2), np.log10(0.5), np.log10(1.), np.log10(2.), np.log
 fig.set_yticklabels(['0.2', '0.5', '1.0', '2.0','10.0'])
 
 fig = plt.gcf()
-fig.set_size_inches(2.3, 1.7)
+fig.set_size_inches(6.3, 3.)
 
-plt.savefig("./figures/fig2a.png", format="png",bbox_inches="tight", dpi=900)
+plt.savefig("./fig_dnds.png", format="png",bbox_inches="tight", dpi=900)
+
+
+
+
+
+
+
+
+
 
 
 
@@ -598,5 +636,5 @@ fig.set_yticklabels(['0.24', '0.26', '0.28'])
 fig = plt.gcf()
 fig.set_size_inches(6.0, 3.)
 
-plt.savefig("./figures/supplementary_fig3.png", format="png",bbox_inches="tight", dpi=900)
+plt.savefig("./fig_dnds_supp.png", format="png",bbox_inches="tight", dpi=900)
 

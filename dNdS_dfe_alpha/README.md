@@ -1,7 +1,8 @@
 ###
 # dN/dS, dfe and alpha
 ###
-Testing for evidence of adaptive evolution by computing dN/dS, dfe and alpha.
+Script to test for evidence of adaptive evolution by computing dN/dS (the rate ratio of nonsynonymous to synonymous substitutions), distribution of fitness effects and alpha (the proportion of adaptive substitutions).
+
 The dN/dS ratio was computed with custom scripts. Dfe and alpha were inferred by polyDFE (Tataru et al. 2017). 
 
 For the dN/dS ratio:

@@ -2,7 +2,7 @@
 
 ###
 #	To run from terminal as:
-# 	python ./scripts/demographic_inference/ccr/scripts/./backup_mainFigCvi_graph_msmc_8hap.py -l "Fogo - Santo Antao" -f ./scripts/demographic_inference/ccr/data/cvi_comparisons.txt -o ./scripts/demographic_inference/ccr/figures/fig1e
+# 	python ./demographic_inference/ccr/scripts/./backup_mainFigCvi_graph_msmc_8hap.py -l "Fogo - Santo Antao" -f ./demographic_inference/ccr/data/cvi_comparisons.txt -o ./demographic_inference/ccr/fig_ccr_main
 ###
 
 
@@ -89,7 +89,7 @@ if not args.means:
   f2 = open(f,'r')
   y_list = []
   for line in f2:
-   res = open('./scripts/demographic_inference/ccr/results/'+line.strip("\n")+".combined.txt", 'r')
+   res = open('Path_to_ccr_results/'+line.strip("\n")+".combined.txt", 'r')
     
    res.readline()
    x = []

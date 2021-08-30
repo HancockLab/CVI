@@ -1,24 +1,25 @@
 #!/usr/bin/python
 
-"""		  FILE: BSAinCVI.py
-		 USAGE: ---
-   DESCRIPTION: ---
-	   OPTIONS: ---
-  REQUIREMENTS: ---
-		  BUGS: ---
-		 NOTES: ---
-		AUTHOR: Emmanuel Tergemina
-  ORGANIZATION: Department of Plant Developmental Biology, Max Planck Institute for Plant Breeding Research
-	   VERSION: 1.0
-	   CREATED: 20200731
-	  REVISION: ---
+"""
+	FILE: BSAinCVI.py
+	USAGE: ---
+	DESCRIPTION: ---
+	OPTIONS: ---
+	REQUIREMENTS: ---
+	BUGS: ---
+	NOTES: ---
+	AUTHOR: Emmanuel Tergemina
+	ORGANIZATION: Department of Plant Developmental Biology, Max Planck Institute for Plant Breeding Research
+	VERSION: 1.0
+	CREATED: 20200731
+	REVISION: ---
 """
 
 import numpy as np
 
-vcf = '/biodata/irg/grp_hancock/VCF/GATK_SNPs_Indels_For_Cape_Verde/NewVersion_withCVI-0s/CapeVerde_SNPs_Indels_Final_segregating.vcf'
+vcf = 'path to vcf'
 
-gatk = raw_input('Which gatk file?\n   - a "BPresolution" file with the path has to be provided...\n   - Example: /srv/netscratch/irg/grp_hancock/Celia/BSA/S5-10xF13-8_F2/output/4572_A.BP_RESOLUTION.GATK.vcf\n ')
+gatk = raw_input('Which gatk file?\n   - a "BPresolution" file with the path has to be provided...\n   - Example: 4572_A.BP_RESOLUTION.GATK.vcf\n ')
 P1 = raw_input('Which parent 1?\n   - a sequencing ID present in the VCF file has to be provided...\n   - Example: 21226\n')
 P2 = raw_input('Which parent 2?\n   - a sequencing ID present in the VCF file has to be provided...\n   - Example: 2876_AU\n')
 stepSize = raw_input('Which step size?\n   - Example: 10000\n')

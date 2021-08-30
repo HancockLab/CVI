@@ -2,10 +2,6 @@
 
 echo $1
 
-###
-#		Get input for EstSFS
-###
-
 matrix= # Path to matrix
 results= # Path to resultis folder
 mkdir -p ${results}

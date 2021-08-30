@@ -2,7 +2,7 @@
 #	Inference of the colonization time
 ###
 
-We narrowed down colonization time by obtaining an upper bound based on the minimum coalescence time between CVI and Morocco, and a lower bound based on the maximum coalescence time within the CVI clade. 
+We narrowed down colonization time by obtaining an upper bound based on the minimum coalescence time between CVI and Morocco, and a lower bound based on the maximum coalescence time within the CVI clade (see Supporting Information). 
 
 ###
 

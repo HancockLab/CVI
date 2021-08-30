@@ -12,8 +12,7 @@ setwd("CVI directory here")
 ######
 
 
-# jsfs = as.matrix(read.table("/Users/andrea/git/CVI/demographic_inference/dadi/data/sfs_interg_2020-06-03_5percN_clean_2020-04-27_sub40_jsfsX.txt", head=F, sep="\t"))
-jsfs = as.matrix(read.table("./scripts/demographic_inference/dadi/data/sfs_wg_2020-06-03_5percN_clean_2020-04-27_sub40_jsfsX.txt", head=F, sep="\t"))
+jsfs = as.matrix(read.table("./demographic_inference/dadi/data/sfs_wg_2020-06-03_5percN_clean_2020-04-27_sub40_jsfsX.txt", head=F, sep="\t"))
 sumJsfs = 0
 
 for (row in 1:length(jsfs[,1])) {
@@ -35,7 +34,7 @@ stat
 
 ymax=0.005
 
-pdf(paste("./scripts/demographic_inference/slim_simulations/figures/edf4d.pdf", sep=""), height=2.5,width=3)
+pdf(paste("./demographic_inference/within_CVI_inference/fig_withinCvi.pdf", sep=""), height=2.5,width=3)
 
 par(ps=7, mfrow=c(1,1), mar=c(2.,2.,0.5,0.)) 
 plot(0, 0, type="n", axes=F, ylab=NULL, xlab=NULL, xlim=c(0, 2501), ylim=c(-ymax, ymax))
@@ -68,7 +67,7 @@ for (ns in seq(100, 2500, 50) ) {
       distrib=vector()
       
       for (rep in 0:30) {
-        fileName=paste("./scripts/demographic_inference/slim_simulations/results/ttot7000_nsStart1_nfStart400_nsStart1_nfStart400_ns", ns, "_nf", nf, "_tf", tFogo, "_rep", rep, "_jsfs_fixSegrega.txt", sep="")
+        fileName=paste("Path_to_slim_results/ttot7000_nsStart1_nfStart400_nsStart1_nfStart400_ns", ns, "_nf", nf, "_tf", tFogo, "_rep", rep, "_jsfs_fixSegrega.txt", sep="")
         
         if (file.exists(fileName)) {
           file <- file(fileName)

@@ -2,7 +2,7 @@
 # Run as:
 # Rscript QTLs_cand-genes_funct-var_longShortBranch.R 
 
-setwd("./scripts/qtl_candidate-genes_functional-variants")
+setwd("./CVI/qtl_candidate-genes_functional-variants")
 
 ####
 ##      Load QTLs, candidate genes and functional variants data
@@ -176,7 +176,7 @@ poisson.test(x=events, T=trials, r = 1, alternative = c("two.sided"))
 offset=0.003
 base=10
 
-pdf("./figures/fig2f.pdf", height=1.8,width=2.7)
+pdf("./fig_longShortBranch.pdf", height=1.8,width=2.7)
 par(ps=7, mfrow=c(1,1), mar=c(2.,1.8,0.5,0.), mgp=c(3, -0.2, 3))
 
 x=c(1.1, 1.3, 1.5)

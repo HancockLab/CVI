@@ -1,6 +1,6 @@
 # Inference of population structure
 
-This directory contains scripts for the inference of population structure in Cape Verde Islands and worldwide accessions
+This directory contains scripts for the inference of population structure in Cape Verde Islands and worldwide accessions, and for plotting
 
 ## nj
 

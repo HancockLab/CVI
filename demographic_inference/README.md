@@ -1,6 +1,6 @@
 # Inference of demography
 
-This directory contains scripts for the inference of the demographic history of Cape Verde Islands Arabidopsis thaliana
+This directory contains scripts for the inference of the demographic history of Cape Verde Islands Arabidopsis thaliana, and for plotting
 
 ## ccr
 
@@ -13,6 +13,10 @@ Different approaches to narrow down the time of colonization of CVI from a ghost
 ## dadi			
 
 Scripts to infer the history of populations with dadi (Gutenkunst et al, 2009)
+
+## jsfs
+
+Script to plot joint site frequency spectra (jsfs)
 
 ## within_CVI_inference
 

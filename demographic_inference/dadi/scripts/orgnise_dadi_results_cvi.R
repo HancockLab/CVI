@@ -5,8 +5,7 @@
 ###
 
 # Unfolded
-setwd("./CVI/scripts/demographic_inference/dadi/")
-	# /Volumes/CVI/final/cvi/dadi/results_cvi_interg_jsfs-sub40-2020-04-27_2020-06-03_5percN_folded/")
+setwd("./CVI/demographic_inference/dadi/")
 mu=7.1*10^(-9)
 L=as.integer(as.matrix(read.table("./data/clean_2020-04-27_sub40_snps_nonN_inTheMask.txt", head=F))[1,1])
 model_result_files=c("./resultspop-split_cvi_allRuns.txt", "splitExp_cvi_allRuns.txt", "im_cvi_allRuns.txt", "bottleneck_cvi_allRuns.txt")
@@ -215,26 +214,5 @@ print("nu1,nuB,nuF,Tb,Tf = params")
 print(runs[max_ll_index,])
 write.table(data.frame("bottleneck", max_ll, AIC, theta, Nref, N1, Nb, N1, Nf, Time, "x", "x", TimeB), 
             file=writeFile, append=TRUE, sep="\t", row.names=FALSE, col.names=FALSE, quote=FALSE)
-
-
-
-
-###
-#       To compare models on their AIC
-###
-# exp((1748.711-1770.225)/2)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

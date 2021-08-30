@@ -6,7 +6,7 @@ Testing the percentage of private variation across QTL regions, candidate genes 
 
 ###
 
-## Folders
+## Files
 
 ### qtls_genes_var.command
 

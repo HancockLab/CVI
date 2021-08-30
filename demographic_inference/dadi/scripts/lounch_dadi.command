@@ -3,7 +3,7 @@
 
 # python simple_unfolded.py 6 exp ./results_cvi_2020-04-21/
 
-sfs= # Path to *_dadiJsfsX.txt file produced by ./CVI/analyses/java/projects/sfs_lounch_2popsToLyrata.command 
+sfs= # Path to *_dadiJsfsX.txt file produced by ./CVI/java_scripts/java/projects/sfs_lounch_2popsToLyrata.command 
 results= # path to results folder
 
 mkdir -p ${results}

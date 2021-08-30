@@ -6,6 +6,7 @@
 ###
 gitPath="path to CVI directory downloaded from github"
 setwd(gitPath)
+setwd("/Users/fulgione/git/CVI")
 
 # Load required libraries 
 
@@ -15,13 +16,17 @@ library(ape)
 
 ##########
 #######
-####      NJ - worldwide plus CVI: Fig. 1b
-####      NJ - within CVI: EDF 1c
+####      NJ - worldwide plus CVI
+####      NJ - within CVI
 #######
 ##########
 
 # 
-plinkFile= "Add here path to *_nj.raw file created by ./scripts/population_structure/nj/neighborJoining_pca_fromVcf.command "
+plinkFile="/Volumes/arabisDisk01/cviPaper/cviPaperNj_all20_2020-05-21_nj.raw"
+  # "/Volumes/CVI_backup/final/cvi/nj/cviPaperNj_all20_2020-05-21_nj.raw"
+  # "/Volumes/CVI_backup/final/cvi/nj/cviPaperNj_withinCVI_2020-06-10_nj.raw"
+  # "Add here path to *_nj.raw file created by ./scripts/population_structure/nj/neighborJoining_pca_fromVcf.command "
+
 x <- read.PLINK(plinkFile, parallel = F)
 
 x <- seploc(x, n.block=10, parallel=FALSE)
@@ -29,7 +34,12 @@ lD <- lapply(x, function(e) dist(as.matrix(e)))
 D <- Reduce("+", lD)
 t3 <- nj(D)
 
-labsFile= "Add here path to *raw_names.txt_idsRegionColSymb.txt file created by ./scripts/population_structure/nj/neighborJoining_pca_fromVcf.command "
+# labsFile= "Add here path to *raw_names.txt_idsRegionColSymb.txt file created by ./scripts/population_structure/nj/neighborJoining_pca_fromVcf.command "
+labsFile="/Volumes/arabisDisk01/cviPaper/cviPaperNj_all20_2020-05-21_nj.raw_names.txt_idsRegionColSymb.txt_iberiaSeparate.txt"
+  # "/Volumes/CVI_backup/final/cvi/nj/cviPaperNj_all20_2020-05-21_nj.raw_names.txt_idsRegionColSymb.txt_iberiaSeparate.txt"
+  # "/Volumes/CVI_backup/final/cvi/nj/cviPaperNj_all20_2020-05-21_nj.raw_names.txt_idsRegionColSymb.txt"
+  # "/Volumes/CVI_backup/final/cvi/nj/cviPaperNj_withinCVI_2020-06-10_nj.raw_names.txt_idsRegionColSymb.txt"
+  # 
 labs <- fread(labsFile, stringsAsFactors = T)
 cols <- as.character(labs$V3)
 
@@ -41,7 +51,7 @@ numIDs=as.vector(labs$V1)
 
 #----
 setEPS()
-postscript("./results/fig1b.eps")
+postscript("./fig1b_3.eps")
 # Or this for NJ - within CVI: EDF 1c:
 # postscript("./results/EDF1c.eps")
 #----

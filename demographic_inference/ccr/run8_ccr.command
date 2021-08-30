@@ -5,7 +5,7 @@
 #
 # while read p; do
 #	./run8_all_ccr.slrm ${p}
-# done<./CVI/scripts/demographic_inference/ccr/data/*_comparisons.txt 
+# done<./CVI/demographic_inference/ccr/data/*_comparisons.txt 
 
 
 p=$1
@@ -35,7 +35,7 @@ TMPDIR= "Path to working directory"
 work=${TMPDIR}/${p}
 mkdir -p ${work}
 RES= # path to results folder 
-DIR=./CVI/scripts/demographic_inference/ccr/ccr_internalScripts
+DIR=./CVI/demographic_inference/ccr/ccr_internalScripts
 WORK= # Path to input files folder
 
 mkdir -p ${WORK}

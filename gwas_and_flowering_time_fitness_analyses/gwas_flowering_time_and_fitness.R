@@ -2,7 +2,7 @@
 ######## whenever you find <...>, you should load the data mentioned from Supplementary Tables
 
 # set working directory
-setwd("")
+setwd("./CVI")
 
 # load libraries
 library(ggplot2)
@@ -69,7 +69,7 @@ my_theme <- theme_bw() +
 ################### Maps ####################
 #############################################     
 ## Fig 1A
-allIsl=read.table("allCoordinates_MorSAFogo.txt", header = T)
+allIsl=read.table("./data/allCoordinates_MorSAFogo.txt", header = T)
 
 icons <- iconList(
   circle <- makeIcon(
@@ -90,11 +90,11 @@ leaflet(allIsl) %>%
   addScaleBar(position = "bottomright", options = scaleBarOptions(metric = T, imperial = F)) 
 
 ######## one by one
-sa=read.table("SantoAntao_sites.txt", header = T)
+sa=read.table("./data/SantoAntao_sites.txt", header = T)
 head(sa)
-fogo=read.table("Fogo_sites.txt", header = T)
+fogo=read.table("./data/Fogo_sites.txt", header = T)
 head(fogo)
-mor=read.table("mor_sites.txt", header = T)
+mor=read.table("./data/mor_sites.txt", header = T)
 
 triangle <- makeIcon(
   iconUrl = "orangeTriangle_transp.png",

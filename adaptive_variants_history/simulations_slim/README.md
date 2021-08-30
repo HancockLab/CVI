@@ -21,4 +21,5 @@ For the supplementary figures this script needs to be used within the directory 
 1. plot_merge.sh
 1. plot_functions_final_merge.R
 2. plot_sims_merge.R
-3. 20201213_FO_haploid_chr5_FLC_inference_sMAX1_TCO7k_coal_df100_dom0_3bins -- inferred CLUES trajectory 
+3. 20201213_FO_haploid_chr5_FLC_inference_sMAX1_TCO7k_coal_df100_dom0_3bins -- inferred CLUES trajectory
+ 

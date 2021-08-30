@@ -17,7 +17,7 @@
 #           GREAT STUFF HERE!  
 ### 
 ######
-pdf("./figures/edf3c.pdf", height=3,width=3.)
+pdf("./fig_ageInWindows.pdf", height=3,width=3.)
 par(ps=7, mfrow=c(1,1), mar=c(2.,2.5,0.5,0.)) # , mgp=c(3, -0.2, 3))
 plot(x=0, y=0, type="n", xlab=NULL, ylab=NULL, xlim=c(10000, 50000), axes=F, ylim=c(0.0, 0.26))
 

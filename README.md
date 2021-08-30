@@ -25,15 +25,15 @@ Java programs to preprocess the vcf, produce input files for analyses and comput
 
 ### population_structure
 
-Scripts for the inference of population structure in Cape Verde Islands and worldwide accessions
+Scripts for the inference of population structure in Cape Verde Islands and worldwide accessions, and for plotting
 
 ### demographic_inference
 
-Scripts for demographic inference in Cape Verde Islands and worldwide accessions
+Scripts for demographic inference in Cape Verde Islands and worldwide accessions, and for plotting
 
 ### dNdS_dfe_alpha
 
-Script to test for evidence of adaptive evolution by computing dN/dS, dfe and alpha.
+Script to test for evidence of adaptive evolution by computing dN/dS (the rate ratio of nonsynonymous to synonymous substitutions), distribution of fitness effects and alpha (the proportion of adaptive substitutions).
 
 ### qtl_candidate-genes_functional-variants
 
